@@ -6,12 +6,20 @@ else it will suggest you an error
 */
 type GreetProps = {
   name: string;
+  isLoggedIn: boolean;
+  notifications: number;
 };
 /*
 this is how we specify type using colon
 */
 function Greet(props: GreetProps) {
-  return <div>Greeting {props.name}</div>;
+  return (
+    <>
+      {props.isLoggedIn
+        ? `welcome ${props.name}, you have ${props.notifications} notifications`
+        : `welcome guest`}
+    </>
+  );
 }
 
 export default Greet;
