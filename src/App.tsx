@@ -13,6 +13,7 @@ import Persons from "./components/Persons";
 import Section from "./components/section/Section";
 import ThemeContextProvider from "./components/useContext/ThemeContextProvider";
 import { useState } from "react";
+import { ClassCounter } from "./components/class/ClassCounter";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -66,6 +67,9 @@ function App() {
           </Section>
           <Section title="useRef">
             <DomRef />
+          </Section>
+          <Section title="class counter">
+            <ClassCounter />
           </Section>
         </div>
       </AuthContextProvider>
