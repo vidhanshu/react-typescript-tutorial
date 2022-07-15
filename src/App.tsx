@@ -13,6 +13,7 @@ import Input from "./components/Input";
 import Person from "./components/Person";
 import Persons from "./components/Persons";
 import Private from "./components/component prop/Private";
+import RandomNumber from "./components/restricting prop/RandomNumber";
 import Section from "./components/section/Section";
 import ThemeContextProvider from "./components/useContext/ThemeContextProvider";
 import { useState } from "react";
@@ -84,6 +85,9 @@ function App() {
                 alert("you clicked " + value);
               }}
             />
+          </Section>
+          <Section title="restricted props">
+            <RandomNumber value={-12} isNegative={true}/>
           </Section>
         </div>
       </AuthContextProvider>
