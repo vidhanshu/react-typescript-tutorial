@@ -91,7 +91,7 @@ function App() {
             <RandomNumber value={-12} isNegative={true} />
           </Section>
           <Section title="Template literal">
-            <TemplateLiteral position="center-center" />
+            <TemplateLiteral position="center" />
           </Section>
         </div>
       </AuthContextProvider>
