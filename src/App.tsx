@@ -5,11 +5,13 @@ import AuthUsingContext from "./components/useContext/AuthUsingContext";
 import Button from "./components/Button";
 import Container from "./components/Container";
 import Counter from "./components/useReducer/Counter";
+import CpAuth from "./components/component prop/CpAuth";
 import DomRef from "./components/useRef/DomRef";
 import Greet from "./components/Greet";
 import Input from "./components/Input";
 import Person from "./components/Person";
 import Persons from "./components/Persons";
+import Private from "./components/component prop/Private";
 import Section from "./components/section/Section";
 import ThemeContextProvider from "./components/useContext/ThemeContextProvider";
 import { useState } from "react";
@@ -70,6 +72,9 @@ function App() {
           </Section>
           <Section title="class counter">
             <ClassCounter />
+          </Section>
+          <Section title="component prop auth">
+            <CpAuth isLoggedIn={true} component={Private} />
           </Section>
         </div>
       </AuthContextProvider>
