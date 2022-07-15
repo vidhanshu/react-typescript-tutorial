@@ -7,9 +7,9 @@ type PersonsProps = {
 
 function Persons(props: PersonsProps) {
   return (
-    <div  style={{textTransform:'capitalize'}}>
-      {props.names.map((e) => (
-        <h4 className="list_item">
+    <div style={{ textTransform: "capitalize" }}>
+      {props.names.map((e, idx) => (
+        <h4 key={idx} className="list_item">
           {e.first} {e.last}
         </h4>
       ))}

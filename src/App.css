@@ -2,7 +2,26 @@
   padding: 10px 15px;
   border: rgb(98, 211, 255);
   background-color: skyblue;
-  color:rgb(0, 121, 169) ;
+  color: rgb(0, 121, 169);
   width: 200px;
   text-align: center;
+}
+
+button {
+  padding: 10px 15px;
+  border: rgb(98, 211, 255);
+  background-color: rgb(0, 183, 255);
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  font-size: 15px;
+  margin: 0px 10px;
+  cursor: pointer;
+  width: 200px;
+  text-align: center;
+}
+
+input{
+  padding: 9px 14px;
+  font-weight: 500;
+  font-size: 15px;
 }

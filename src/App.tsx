@@ -1,10 +1,14 @@
 import "./App.css";
+import Button from "./components/Button";
 import Greet from "./components/Greet";
+import Input from "./components/section/Input";
 import Person from "./components/Person";
 import Persons from "./components/Persons";
 import Section from "./components/section/Section";
+import { useState } from "react";
 
 function App() {
+  const [count, setCount] = useState(0);
   const name = {
     first: "vidhanshu",
     last: "borade",
@@ -25,6 +29,15 @@ function App() {
         <Greet name="vidhanshu" isLoggedIn={true} notifications={13} />
         <Person name={name} />
         <Persons names={names} />
+      </Section>
+      <Section>
+        you have clicked {count} times
+        <Button onClickHandler={() => setCount((i) => i + 1)}>click</Button>
+        <Input
+          handleChange={(evt) => {
+            console.log(evt.target.value);
+          }}
+        />
       </Section>
     </div>
   );
