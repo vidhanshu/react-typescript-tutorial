@@ -1,5 +1,6 @@
 import "./App.css";
 import Button from "./components/Button";
+import Container from "./components/Container";
 import Greet from "./components/Greet";
 import Input from "./components/section/Input";
 import Person from "./components/Person";
@@ -26,7 +27,9 @@ function App() {
   return (
     <div className="App">
       <Section>
-        <Greet name="vidhanshu" isLoggedIn={true} notifications={13} />
+        <Container styles={{ border: "1px solid red" }}>
+          <Greet name="vidhanshu" isLoggedIn={true} notifications={13} />
+        </Container>
         <Person name={name} />
         <Persons names={names} />
       </Section>
