@@ -1,15 +1,15 @@
 import "./App.css";
-import Auth from "./components/useState/Auth";
+import Auth from "./components/Auth";
 import AuthContextProvider from "./components/useContext/AuthContextProvider";
 import AuthUsingContext from "./components/useContext/AuthUsingContext";
-import Button from "./components/Button";
+import Button from "./components/html/Button";
 import Container from "./components/Container";
 import Counter from "./components/useReducer/Counter";
 import CpAuth from "./components/component prop/CpAuth";
 import DomRef from "./components/useRef/DomRef";
 import GenericList from "./components/generic props/GenericList";
 import Greet from "./components/Greet";
-import Input from "./components/Input";
+import Input from "./components/html/Input";
 import Person from "./components/Person";
 import Persons from "./components/Persons";
 import Private from "./components/component prop/Private";
@@ -53,9 +53,9 @@ function App() {
             <Person name={name} />
             <Persons names={names} />
           </Section>
-          <Section title="passing event">
+          <Section title="passing event - this is causing to rerender App.tsx hence getting focused to use ref">
             you have clicked {count} times
-            <Button onClickHandler={() => setCount((i) => i + 1)}>click</Button>
+            <Button onClick={() => setCount((i) => i + 1)}>click</Button>
           </Section>
           <Section title="input">
             <Input

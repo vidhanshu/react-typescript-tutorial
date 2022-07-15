@@ -1,4 +1,4 @@
-import Button from "./../Button";
+import Button from "./html/Button";
 import { useState } from "react";
 
 type user = {
@@ -11,7 +11,7 @@ function Auth() {
   return (
     <div>
       <Button
-        onClickHandler={() =>
+        onClick={() =>
           setUser({
             name: "vidhanshu",
           })
@@ -19,7 +19,7 @@ function Auth() {
       >
         login
       </Button>
-      <Button onClickHandler={() => setUser({} as user)}>logout</Button>
+      <Button onClick={() => setUser({} as user)}>logout</Button>
       <div>logged in as {user.name || "guest"}</div>
     </div>
   );
