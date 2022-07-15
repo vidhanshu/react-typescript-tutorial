@@ -2,6 +2,7 @@ import "./App.css";
 import Auth from "./components/useState/Auth";
 import Button from "./components/Button";
 import Container from "./components/Container";
+import Counter from "./components/useReducer/Counter";
 import Greet from "./components/Greet";
 import Input from "./components/section/Input";
 import Person from "./components/Person";
@@ -31,7 +32,9 @@ function App() {
         <Auth />
       </Section>
       <Section title="application">
-        <Container styles={{ background: "rgba(0,0,0,0.1)",borderRadius:'3px' }}>
+        <Container
+          styles={{ background: "rgba(0,0,0,0.1)", borderRadius: "3px" }}
+        >
           <Greet name="vidhanshu" isLoggedIn={true} notifications={13} />
         </Container>
         <Person name={name} />
@@ -45,6 +48,9 @@ function App() {
             console.log(evt.target.value);
           }}
         />
+      </Section>
+      <Section>
+        <Counter />
       </Section>
     </div>
   );
