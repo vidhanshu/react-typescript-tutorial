@@ -5,6 +5,7 @@ import AuthUsingContext from "./components/useContext/AuthUsingContext";
 import Button from "./components/Button";
 import Container from "./components/Container";
 import Counter from "./components/useReducer/Counter";
+import DomRef from "./components/useRef/DomRef";
 import Greet from "./components/Greet";
 import Input from "./components/Input";
 import Person from "./components/Person";
@@ -62,6 +63,9 @@ function App() {
           </Section>
           <Section title="authentication using context">
             <AuthUsingContext />
+          </Section>
+          <Section title="useRef">
+            <DomRef />
           </Section>
         </div>
       </AuthContextProvider>
