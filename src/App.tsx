@@ -1,4 +1,5 @@
 import "./App.css";
+import Auth from "./components/useState/Auth";
 import Button from "./components/Button";
 import Container from "./components/Container";
 import Greet from "./components/Greet";
@@ -26,8 +27,11 @@ function App() {
 
   return (
     <div className="App">
-      <Section>
-        <Container styles={{ border: "1px solid red" }}>
+      <Section title="authentication">
+        <Auth />
+      </Section>
+      <Section title="application">
+        <Container styles={{ background: "rgba(0,0,0,0.1)",borderRadius:'3px' }}>
           <Greet name="vidhanshu" isLoggedIn={true} notifications={13} />
         </Container>
         <Person name={name} />

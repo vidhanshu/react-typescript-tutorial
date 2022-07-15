@@ -1,10 +1,14 @@
 type ContainerProps = {
   styles?: React.CSSProperties;
-  children:React.ReactNode
+  children: React.ReactNode;
 };
 
 function Container(props: ContainerProps) {
-  return <div style={props.styles}>Container</div>;
+  return (
+    <div className="container" style={props.styles}>
+      {props.children}
+    </div>
+  );
 }
 
 export default Container;
