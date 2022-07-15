@@ -5,7 +5,7 @@ type counterStateType = {
 };
 
 type updateStateType = {
-  type: "increment" | "decrement" | "reset";
+  type: "increment" | "decrement";
   payload: number;
 };
 
