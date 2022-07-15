@@ -1,11 +1,6 @@
-type PersonsProps = {
-  names: {
-    first: string;
-    last: string;
-  }[];
-};
+import { PersonList } from "./person.types";
 
-function Persons(props: PersonsProps) {
+function Persons(props: PersonList) {
   return (
     <div style={{ textTransform: "capitalize" }}>
       {props.names.map((e, idx) => (
