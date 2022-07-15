@@ -2,6 +2,7 @@ import "./App.css";
 import Greet from "./components/Greet";
 import Person from "./components/Person";
 import Persons from "./components/Persons";
+import Section from "./components/section/Section";
 
 function App() {
   const name = {
@@ -20,9 +21,11 @@ function App() {
 
   return (
     <div className="App">
-      <Greet name="vidhanshu" isLoggedIn={true} notifications={13} />
-      <Person name={name} />
-      <Persons names={names} />
+      <Section>
+        <Greet name="vidhanshu" isLoggedIn={true} notifications={13} />
+        <Person name={name} />
+        <Persons names={names} />
+      </Section>
     </div>
   );
 }

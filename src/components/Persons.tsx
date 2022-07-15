@@ -9,7 +9,7 @@ function Persons(props: PersonsProps) {
   return (
     <div  style={{textTransform:'capitalize'}}>
       {props.names.map((e) => (
-        <h4>
+        <h4 className="list_item">
           {e.first} {e.last}
         </h4>
       ))}
