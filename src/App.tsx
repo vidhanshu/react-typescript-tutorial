@@ -8,6 +8,7 @@ import Input from "./components/section/Input";
 import Person from "./components/Person";
 import Persons from "./components/Persons";
 import Section from "./components/section/Section";
+import ThemeContextProvider from "./components/useContext/ThemeContextProvider";
 import { useState } from "react";
 
 function App() {
@@ -27,32 +28,36 @@ function App() {
   ];
 
   return (
-    <div className="App">
-      <Section title="authentication">
-        <Auth />
-      </Section>
-      <Section title="application">
-        <Container
-          styles={{ background: "rgba(0,0,0,0.1)", borderRadius: "3px" }}
-        >
-          <Greet name="vidhanshu" isLoggedIn={true} notifications={13} />
-        </Container>
-        <Person name={name} />
-        <Persons names={names} />
-      </Section>
-      <Section>
-        you have clicked {count} times
-        <Button onClickHandler={() => setCount((i) => i + 1)}>click</Button>
-        <Input
-          handleChange={(evt) => {
-            console.log(evt.target.value);
-          }}
-        />
-      </Section>
-      <Section>
-        <Counter />
-      </Section>
-    </div>
+    <ThemeContextProvider>
+      <div className="App">
+        <Section title="authentication">
+          <Auth />
+        </Section>
+        <Section title="sending styles">
+          <Container
+            styles={{ background: "rgba(0,0,0,0.1)", borderRadius: "3px" }}
+          >
+            <Greet name="vidhanshu" isLoggedIn={true} notifications={13} />
+          </Container>
+        </Section>
+        <Section title="rendering list">
+          <Person name={name} />
+          <Persons names={names} />
+        </Section>
+        <Section title="passing event">
+          you have clicked {count} times
+          <Button onClickHandler={() => setCount((i) => i + 1)}>click</Button>
+          <Input
+            handleChange={(evt) => {
+              console.log(evt.target.value);
+            }}
+          />
+        </Section>
+        <Section title="useReducer">
+          <Counter />
+        </Section>
+      </div>
+    </ThemeContextProvider>
   );
 }
 
