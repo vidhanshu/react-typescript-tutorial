@@ -7,6 +7,7 @@ import Container from "./components/Container";
 import Counter from "./components/useReducer/Counter";
 import CpAuth from "./components/component prop/CpAuth";
 import DomRef from "./components/useRef/DomRef";
+import GenericList from "./components/generic props/GenericList";
 import Greet from "./components/Greet";
 import Input from "./components/Input";
 import Person from "./components/Person";
@@ -75,6 +76,14 @@ function App() {
           </Section>
           <Section title="component prop auth">
             <CpAuth isLoggedIn={true} component={Private} />
+          </Section>
+          <Section title="generic prop">
+            <GenericList
+              list={[1, 2, 3, 4, 5]}
+              onClickHandler={(value) => {
+                alert("you clicked " + value);
+              }}
+            />
           </Section>
         </div>
       </AuthContextProvider>
