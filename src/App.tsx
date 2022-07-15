@@ -15,6 +15,7 @@ import Persons from "./components/Persons";
 import Private from "./components/component prop/Private";
 import RandomNumber from "./components/restricting prop/RandomNumber";
 import Section from "./components/section/Section";
+import TemplateLiteral from "./components/template literal types/TemplateLiteral";
 import ThemeContextProvider from "./components/useContext/ThemeContextProvider";
 import { useState } from "react";
 import { ClassCounter } from "./components/class/ClassCounter";
@@ -87,7 +88,10 @@ function App() {
             />
           </Section>
           <Section title="restricted props">
-            <RandomNumber value={-12} isNegative={true}/>
+            <RandomNumber value={-12} isNegative={true} />
+          </Section>
+          <Section title="Template literal">
+            <TemplateLiteral position="center-center" />
           </Section>
         </div>
       </AuthContextProvider>
